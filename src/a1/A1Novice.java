@@ -34,6 +34,8 @@ public class A1Novice {
 				items[2][j] = scan.next();
 			}
 			
+			scan.close();
+			
 			// calculate the output and save it
 			double sum = 0.0;
 			for (int j = 0; j < numberOfItems; j++) {
