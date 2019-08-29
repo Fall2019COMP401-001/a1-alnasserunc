@@ -51,8 +51,8 @@ public class A1Adept {
 			}
 		}
 		
-		System.out.println("Biggest: " + biggest(customers).firstName + " " + biggest(customers).lastName + " (" + String.format("%.2f", biggest(customers).amountSpent + ")"));
-		System.out.println("Smallest: " + smallest(customers).firstName + " " + smallest(customers).lastName + " (" + String.format("%.2f", smallest(customers).amountSpent + ")"));
+		System.out.println("Biggest: " + biggest(customers).firstName + " " + biggest(customers).lastName + " (" + String.format("%.2f", biggest(customers).amountSpent) + ")");
+		System.out.println("Smallest: " + smallest(customers).firstName + " " + smallest(customers).lastName + " (" + String.format("%.2f", smallest(customers).amountSpent) + ")");
 		System.out.println("Average: " + String.format("%.2f", sum(customers) / customers.length));
 
 		scan.close();
