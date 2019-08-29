@@ -34,7 +34,6 @@ public class A1Novice {
 				items[2][j] = scan.next();
 			}
 			
-			scan.close();
 			
 			// calculate the output and save it
 			double sum = 0.0;
@@ -50,5 +49,7 @@ public class A1Novice {
 		for (int i = 0; i < numberOfCustomers; i++) {
 			System.out.println(outputString[i]);
 		}
+
+		scan.close();
 	}
 }
