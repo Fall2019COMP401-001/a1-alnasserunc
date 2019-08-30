@@ -55,10 +55,21 @@ public class A1Jedi {
 			itemCount[i] = 0;
 		}
 		
+		
+		
 		for (int i = 0; i < customers.length; i++) {
+			boolean[] didCustomerBuyItem = new boolean[itemNames.length];
+			for (int j = 0; j < didCustomerBuyItem.length; j++) {
+				didCustomerBuyItem[j] = false;
+			}
+			
 			for (int j = 0; j < customers[i].itemsBought.length; j++) {
-				customerCount[findIndex(itemNames, numberOfItems, customers[i].itemsBought[j].name)] += 1;
-				itemCount[findIndex(itemNames, numberOfItems, customers[i].itemsBought[j].name)] += customers[i].itemsBought[j].quantity;
+				int index = findIndex(itemNames, numberOfItems, customers[i].itemsBought[j].name);
+				if (!didCustomerBuyItem[index]) {
+						customerCount[index] += 1;
+						didCustomerBuyItem[index] = true;
+				}
+				itemCount[index] += customers[i].itemsBought[j].quantity;
 			}
 		}
 		
